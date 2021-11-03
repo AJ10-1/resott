@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="keywords" content="business, travel">
+  <meta name="author" content=" ">
+  <meta name="description"
+    content="Today, tourism has the greatest potential ever to contribute to healthy economic growth, secure jobs, foreign exchange earnings and the further development of local communities.">
+  <!-- For IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- For Resposive Device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- For Window Tab Color -->
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#ed3072">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#ed3072">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ed3072">
+  <title>Troli - Tour and travel guide :: Profile</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}">
+  <!-- Main style sheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <!-- responsive style sheet -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background: #f5f5f5;
+      margin-top: 20px;
+    }
+
+    .ui-w-80 {
+      width: 80px !important;
+      height: auto;
+    }
+
+    .btn-default {
+      border-color: rgba(24, 28, 33, 0.1);
+      background: rgba(0, 0, 0, 0);
+      color: #4E5155;
+    }
+
+    label.btn {
+      margin-bottom: 0;
+    }
+
+    .btn-outline-primary {
+      border-color: #26B4FF;
+      background: transparent;
+      color: #26B4FF;
+    }
+
+    .btn {
+      cursor: pointer;
+    }
+
+    .text-light {
+      color: #babbbc !important;
+    }
+
+    .btn-facebook {
+      border-color: rgba(0, 0, 0, 0);
+      background: #3B5998;
+      color: #fff;
+    }
+
+    .btn-instagram {
+      border-color: rgba(0, 0, 0, 0);
+      background: #000;
+      color: #fff;
+    }
+
+    .card {
+      background-clip: padding-box;
+      box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+    }
+
+    .row-bordered {
+      overflow: hidden;
+    }
+
+    .account-settings-fileinput {
+      position: absolute;
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    .account-settings-links .list-group-item.active {
+      font-weight: bold !important;
+    }
+
+    html:not(.dark-style) .account-settings-links .list-group-item.active {
+      background: transparent !important;
+    }
+
+    .account-settings-multiselect~.select2-container {
+      width: 100% !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+      padding: 0.85rem 1.5rem;
+      border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+      color: #4e5155 !important;
+    }
+
+    .material-style .account-settings-links .list-group-item {
+      padding: 0.85rem 1.5rem;
+      border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+
+    .material-style .account-settings-links .list-group-item.active {
+      color: #4e5155 !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item {
+      padding: 0.85rem 1.5rem;
+      border-color: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item.active {
+      color: #fff !important;
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+      color: #4E5155 !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+      padding: 0.85rem 1.5rem;
+      border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container light-style flex-grow-1 container-p-y">
+
+    <h4 class="font-weight-bold py-3 mb-4">
+      Profile
+    </h4>
+
+    <div class="card overflow-hidden">
+      <div class="row no-gutters row-bordered row-border-light">
+        <div class="col-md-3 pt-0">
+          <div class="list-group list-group-flush account-settings-links">
+            <a class="list-group-item list-group-item-action active" data-toggle="list"
+              href="#account-general">Profile Settings</a>
+            {% comment %} <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Change
+              password</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Info</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Social
+              links</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list"
+              href="#account-connections">Connections</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list"
+              href="#account-notifications">Notifications</a> {% endcomment %}
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="tab-content">
+            <div class="tab-pane fade active show" id="account-general">
+
+              <div class="card-body media align-items-center">
+                <img src="{{ dis.profile_pic.url }}" alt="Profile Pic" name="img" class="d-block ui-w-80">
+                <div class="media-body ml-4">
+
+                </div>
+              </div>
+              <hr class="border-light m-0">
+
+              <div class="card-body">
+                <div class="form-group">
+                  <label class="form-label">Username</label>
+                  <input type="text" class="form-control mb-1" value="{{user.username}}" readonly>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Name</label>
+                  <input type="text" class="form-control" value="{{user.first_name}} {{user.last_name}}" readonly>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Contact</label>
+                  <input type="text" class="form-control mb-1" value="{{dis.contact_no}}" readonly>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Aadhar No.</label>
+                  <input type="text" class="form-control" value="{{dis.aadhar_id}}" readonly>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-right mt-3">
+      <a href="{% url 'update_profile' %}"><button class="btn btn-success" type="submit" name="Update Profile"
+          value="">Update Profile</button></a>
+
+      <button type="button" class="btn btn-default"><a href="{% url 'index' %}" class="text-dark">Cancel</a></button>
+
+    </div>
+
+
+    {% if x|length == 0 %}
+    <p>No feedbacks</p>
+    {% else %}
+    <h1>Feedback({ x|length })</h1>
+    {% for i in contact %}
+    <p>Message: {{ i.content }}
+      {% endfor %}
+      {% endif %}
+
+  </div>
+
+
+
+  
+  <div class="item row">
+    {% for i in tour %}
+    <div class="blog-post-meta col-md-4 p-5">
+      <div class="img-meta" style="background-image: url({{ i.image.url }});"></div>
+      <div class="post-meta">
+        <h4 class="title"><a href="#">{{ i.name_of_dish }}</a></h4>
+        <p><b>Price</b>: INR {{ i.price }}</p>
+        <p><b>Category</b>: {{ i.cate }}</p>
+        <p><b>Service Provider</b>: {{ i.service_provider }}</p>
+        <p><b>Detail</b>: {{ i.desc }}</p>
+      
+      </div> <!-- /.post-meta -->
+    </div> <!-- /.blog-post-meta -->
+    {% endfor %}
+  </div>
+ 
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+
+</html>

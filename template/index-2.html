@@ -1,0 +1,904 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from html.heloshape.com/troli/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 06:33:57 GMT -->
+<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="business, travel">
+		<meta name="author" content=" ">
+		<meta name="description" content="Today, tourism has the greatest potential ever to contribute to healthy economic growth, secure jobs, foreign exchange earnings and the further development of local communities.">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#ed3072">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#ed3072">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#ed3072">
+		<title>Troli - Tour and travel guide HTML5 Template</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}">
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+		<!-- Fix Internet Explorer ______________________________________-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->	
+	</head>
+
+	<body>
+		<div class="main-page-wrapper">
+
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<section>
+				<div id="preloader">
+					<div id="ctn-preloader" class="ctn-preloader">
+						<div class="animation-preloader">
+							<img src="{% static 'images/1.svg' %}" alt="">
+							<div class="txt-loading">
+								<span data-text-preloader="T" class="letters-loading">
+									T
+								</span>
+								<span data-text-preloader="R" class="letters-loading">
+									R
+								</span>
+								<span data-text-preloader="O" class="letters-loading">
+									O
+								</span>
+								<span data-text-preloader="L" class="letters-loading">
+									L
+								</span>
+								<span data-text-preloader="I" class="letters-loading">
+									I
+								</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- 
+			=============================================
+				Theme Main Menu
+			============================================== 
+			-->
+			<div class="theme-main-menu">
+				<div class="top-heaader">
+					<div class="clearfix">
+						<div class="">
+							<ul class="d-flex align-items-center justify-content-between">
+								<li class="call-us mr-auto"><p>Call Us: <a href="tel:+0099225577">+00 99 22 55 77</a></p></li>
+								<li>
+									<ul class="social-icon d-sm-flex">
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+									</ul>
+								</li>
+								<li class="language-switcher">
+									<div class="dropdown">
+										<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+										    En
+										</button>
+										<div class="dropdown-menu">
+											<ul class="ct-language__dropdown">
+												<li><a href="#" class="lang-en lang-select">ENGLISH</a></li>
+												<li><a href="#" class="lang-es lang-select">NORWEGIAN</a></li>
+											</ul>
+									  	</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div> <!-- /.top-heaader -->
+
+				<div class="main-header">
+					<div class="d-flex align-items-center justify-content-between">
+						<nav id="mega-menu-holder" class="navbar navbar-expand-lg order-lg-2">
+							<div  class="nav-container">
+								<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							        <span></span>
+							    </button>
+							   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+							   		<ul class="navbar-nav">
+							   			<li class="nav-item active">
+								            <a class="nav-link" href="index-2.html">Home</a>
+								        </li>
+									    <li class="nav-item dropdown-holder">
+									    	<a href="#" class="nav-link">About us</a>
+									    	<ul class="sub-menu">
+									    		<li class="sub-nav-item"><a href="{% url 'about' %}">About Us</a></li>
+								            	<li class="sub-nav-item"><a href="{% url 'ourtrip %}">Our trip concepts</a></li>
+								            </ul>
+									    </li>
+									    <li class="nav-item dropdown-holder">
+									    	<a href="#" class="nav-link">Travel Guide</a>
+									    	<ul class="sub-menu">
+									    		<li class="sub-nav-item"><a href="travel-with-local.html">Our Guide</a></li>
+								            	<li class="sub-nav-item"><a href="travel-with-local-inner.html">Guide Details</a></li>
+								            	<li class="sub-nav-item"><a href="resource-library.html">Inspiration library</a></li>
+								            </ul>
+									    </li>
+								        <li class="nav-item dropdown-holder">
+								            <a class="nav-link" href="#">Discover</a>
+								            <ul class="sub-menu">
+								            	<li class="sub-nav-item"><a href="discover.html">Discover Tour</a></li>
+								            	<li class="sub-nav-item"><a href="tour-details.html">Tour Details</a></li>
+								            	<li class="sub-dropdown-holder sub-nav-item">
+								            		<a href="#">Africa</a>
+								            		<ul class="sub-sub-menu">
+								            			<li class="sub-nav-item"><a href="discover-india.html">Uganda</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Zimbabwe</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Malawi</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Zambia</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Botswana</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Kenya</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Tanzania</a></li>
+								            		</ul>
+								            	</li>
+								            	<li class="sub-dropdown-holder sub-nav-item">
+								            		<a href="#">Asia</a>
+								            		<ul class="sub-sub-menu">
+								            			<li class="sub-nav-item"><a href="discover-india.html">India</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Indonesia</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">Thailand</a></li>
+											           	<li class="sub-nav-item"><a href="discover-india.html">The Philippines</a></li>
+								            		</ul>
+								            	</li>
+								            </ul>
+								        </li>
+								        <li class="nav-item dropdown-holder">
+								            <a class="nav-link" href="#">Feature</a>
+								            <ul class="sub-menu">
+								            	<li class="sub-nav-item"><a href="get-start.html">Get Started</a></li>
+								            	<li class="sub-nav-item"><a href="experience.html">Experiences</a></li>
+								            	<li class="sub-nav-item"><a href="cart.html">Cart</a></li>
+								            	<li class="sub-nav-item"><a href="check-out.html">Checkout</a></li>
+								            	<li class="sub-nav-item"><a href="article-submission.html">Article Submission</a></li>
+								            	<li class="sub-nav-item"><a href="press.html">Press</a></li>
+								            </ul>
+								        </li>
+								        <li class="nav-item dropdown-holder">
+								            <a class="nav-link" href="#">Get Inspired</a>
+								            <ul class="sub-menu">
+								            	<li class="sub-nav-item"><a href="our-blog.html">Our Blog</a></li>
+								            	<li class="sub-nav-item"><a href="blog-details.html">Blog Details</a></li>
+											    <li class="sub-nav-item"><a href="contribution.html">Contribution</a></li>
+											    <li class="sub-nav-item"><a href="our-stories.html">Our Stories</a></li>
+											    <li class="sub-nav-item"><a href="pledge.html">Pledge</a></li>
+								            </ul>
+								        </li>
+								        <li class="nav-item">
+								            <a class="nav-link" href="contact.html">Contact</a>
+								        </li>
+								   </ul>
+							   </div>
+							</div> <!-- /.container -->
+						</nav> <!-- /#mega-menu-holder -->
+						<div class="logo order-lg-1"><a href="index-2.html"><img src="{% static 'images/logo/logo1.svg' %}" alt=""></a></div>
+						<ul class="right-widget d-flex order-lg-3">
+							<li class="search-form">
+								<div class="dropdown">
+									<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+									    <i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<form action="#" class="search-form">
+											<input type="text" placeholder="Search...">
+										</form>
+								  	</div>
+								</div>
+							</li>
+							<li><a href="contact.html" class="theme-main-button">Travel Now</a></li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- /.theme-main-menu -->
+			
+
+
+			<!-- 
+			=============================================
+				Theme Main Hero Banner
+			============================================== 
+			-->
+			<div class="main-hero-banner d-flex align-items-center justify-content-center" style="background-image: url(static/images/banners/homepage_hero.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 m-auto">
+							<h1 data-aos="fade-up">Leave with no excuses and travel with no regrets</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="search-filter">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-11 m-auto">
+								<div class="main-wrapper">
+									<form action="#">
+										<div class="row">
+											<div class="col-xl-4 col-lg-3 md-mb-20">
+												<div class="dropdown-holder">
+													<select class="theme-select-menu">
+														<option value="">Destination</option>
+														<optgroup label="ASIA">
+															<option value="India">India</option>
+															<option value="indonesia">indonesia</option>
+															<option value="the philippines">the philippines</option>
+															<option value="thailand">thailand</option>
+														</optgroup>
+														<optgroup label="AFRICA">
+															<option value="malawi">malawi</option>
+															<option value="botswana">botswana</option>
+															<option value="kenya">kenya</option>
+															<option value="tanzania">tanzania</option>
+															<option value="zambia">zambia</option>
+															<option value="zimbabwe">zimbabwe</option>
+														</optgroup>
+														<optgroup label="SORT BY EXPERIENCE">
+															<option value="beach vibes">beach vibes</option>
+															<option value="safari & wildlife">safari & wildlife</option>
+															<option value="backpacking">backpacking</option>
+															<option value="live like a local">live like a local</option>
+															<option value="mountains">mountains</option>
+															<option value="food & culture">food & culture</option>
+															<option value="adrenaline">adrenaline</option>
+															<option value="fitness">fitness</option>
+															<option value="honeymoon">honeymoon</option>
+														</optgroup>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-lg-3 col-sm-6 md-mb-20">
+												<input type="text" name="daterange" value="Enter Date" class="input-box">
+											</div>
+
+											<div class="col-lg-3 col-sm-6 md-mb-20">
+												<div class="people-count">
+													<div class="people-input">
+														<input type="number" name="total-people" id="total-people" readonly placeholder="People">
+													</div>
+													<div class="count-dropdown">
+														<label for="adult">Adults</label>
+														<input type="number" name="adult" id="adult" min="0" required >
+														<label for="children">Children</label>
+														<input type="number" name="children" id="children" min="0" required >
+
+														<div class="apply-pepole">Apply</div>
+													</div>
+												</div> <!-- /.people-count -->
+											</div>
+
+											<div class="col-xl-2 col-lg-3">
+												<button class="theme-main-button m-auto">Search</button>
+											</div>
+										</div>
+									</form>
+								</div> <!-- /.main-wrapper -->
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.search-filter -->
+			</div> <!-- /.main-hero-banner -->
+
+
+
+			<!-- 
+			=============================================
+				Local Experience
+			============================================== 
+			-->
+			<div class="local-experience mt-180 md-mt-250 md-pt-80 sm-pt-150">
+				<div class="container">
+					<div class="theme-title-one text-center">
+						<h2>Your Next Holiday</h2>
+					</div> <!-- /.theme-title-one -->
+
+
+					<div class="row">
+						<div class="col-lg-4" data-aos="fade-up">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src="{% static 'images/icon/camera.png' %}" alt="" class="icon">
+								<h4>LOCAL COMMITMENT</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src="{% static 'images/icon/palm_tree.png' %}" alt="" class="icon">
+								<h4>ECO-FRIENDLY EXPERIENCES</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src="{% static 'images/icon/bicycle.png' %}" alt="" class="icon">
+								<h4>ETHICAL AWARENESS</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-70 md-mt-50">
+						<a href="travel-with-local.html" class="theme-main-button lg">travels witl us</a>
+					</div>
+				</div> <!-- /.container -->
+			</div> <!-- /.local-experience -->
+
+
+
+			<!-- 
+			=============================================
+				Trip Finder
+			============================================== 
+			-->
+			<div class="trip-finder mt-130 md-mt-80">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>What are you looking for?</h2>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="trip-finder-slider">
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp1.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>SAFARI & WILDLIFE </h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp2.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>AFRIKA</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp3.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>ASIA</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp5.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>BEACH VIBES </h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp6.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>ADRENALINE</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp4.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>HONEYMOON</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp7.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>FITNESS</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp8.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>BACKPACING</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp3.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>LIKE A LOCAL</h3>
+								</a>
+							</div>
+						</div>
+					</div> <!-- /.trip-finder-slider -->
+
+					<div class="text-center mt-70 md-mt-40">
+						<a href="experience.html" class="theme-main-button lg">ALL EXPERIENCES</a>
+					</div>
+				</div>
+			</div> <!-- /.trip-finder -->
+
+
+			<!-- 
+			=============================================
+				Trip Concept
+			============================================== 
+			-->
+			<div class="trip-concepts fancy-bg" style="background-image: url(static/images/banners/homepage_footer.jpg);">
+				<div class="overlay pt-130 pb-110 md-pt-80 md-pb-40">
+					<div class="container">
+						<div class="theme-title-one text-center">
+							<h2>Unique Trip Concepts</h2>
+							<h5>A new way to travel</h5>
+							<div class="row">
+								<div class="col-lg-6 m-auto">
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+								</div>
+							</div>
+						</div> <!-- /.theme-title-one -->
+
+						<div class="row">
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src="images/icon/lotus.png" alt="" class="icon">
+									<h4>ORIENTATION</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src="images/icon/festival.png" alt="" class="icon">
+									<h4>Events</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src="images/icon/trip.png" alt="" class="icon">
+									<h4>DREAM JOURNEY</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src="images/icon/hyperlocal.png" alt="" class="icon">
+									<h4>LOCAL ENTIRE</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.trip-concepts -->
+
+
+
+			<!-- 
+			=============================================
+				Trip Explorer
+			============================================== 
+			-->
+			<div class="trip-explorer mt-40">
+				<div class="container">
+					<div class="theme-title-one text-center mb-20 md-m0">
+						<h2>Explore The World With Us</h2>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="row">
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_1.jpg);"></div>
+								<div class="text-box">
+									<h4><a href="#">Peru and the Galapagos Luxury</a></h4>
+									<p>A combination of two of the most stunning and important destinations in South America, all in... </p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$1,600</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_2.jpg);"></div>
+								<div class="text-box">
+									<div class="tag">Hot Trip</div>
+									<h4><a href="#">Safari, Wine and Waterfalls</a></h4>
+									<p>A wonderful introduction to the beauty and wildlife of Kenya, perfect for a first time visitor </p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$1,100</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_3.jpg);"></div>
+								<div class="text-box">
+									<h4><a href="#">Glaciers and Northern Lights</a></h4>
+									<p>An introduction to the Harbour City, the Outback and Great Barrier Reef</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$1,200</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_4.jpg);"></div>
+								<div class="text-box">
+									<h4><a href="#">Peru and the Galapagos Luxury</a></h4>
+									<p>A combination of two of the most stunning and important destinations in South America, all in... </p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$1,300</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_5.jpg);"></div>
+								<div class="text-box">
+									<h4><a href="#">Safari, Wine and Waterfalls</a></h4>
+									<p>A wonderful introduction to the beauty and wildlife of Kenya, perfect for a first time visitor </p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$1,500</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+						<div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="block-style-three mt-40">
+								<div class="img-box" style="background-image: url(static/images/assets/tour_expo_6.jpg);"></div>
+								<div class="text-box">
+									<div class="tag">Hot Trip</div>
+									<h4><a href="#">Glaciers and Northern Lights</a></h4>
+									<p>An introduction to the Harbour City, the Outback and Great Barrier Reef</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<a href="tour-details.html" class="explore-btn">explore this trip</a>
+										<div class="price">
+											From <strong>$800</strong>
+										</div>
+									</div>
+								</div> <!-- /.text-box -->
+							</div> <!-- /.block-style-three -->
+						</div>
+					</div>
+
+					<div class="text-center mt-70 md-mt-40">
+						<a href="experience.html" class="theme-main-button">MORE EXPERIENCES HERE</a>
+					</div>
+				</div>
+			</div> <!-- /.trip-explorer -->
+
+
+
+			<!-- 
+			=============================================
+				Local Ambassadors
+			============================================== 
+			-->
+			<div class="local-ambassadors mt-130 md-mt-80">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>Meet Our Local Guides</h2>
+						<div class="row">
+							<div class="col-lg-9 col-md-10">
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
+							</div>
+						</div>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="ambassadors-slider">
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_1.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Virat Kholi</h4>
+										<p>India</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_2.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Bostone Huda</h4>
+										<p>Zambia</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_3.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Polika Syle</h4>
+										<p>Zimbabwe</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_4.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Masakadzza</h4>
+										<p>Botswana</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_5.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Ching Lui </h4>
+										<p>Thailand</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+						<div class="item">
+							<div class="ambassadors-block" style="background-image: url(static/images/ambassadors/Ambassador_6.jpg);">
+								<div class="text d-flex align-items-end">
+									<div>
+										<h4>Keraon Lopaz</h4>
+										<p>Uganda</p>
+										<a href="#">Travel With me</a>
+									</div>
+								</div>
+							</div> <!-- /.ambassadors-block -->
+						</div>
+					</div> <!-- /.ambassadors-slider -->
+
+					<div class="text-center mt-70 md-mt-50">
+						<a href="#" class="theme-main-button">Meet all our guides!</a>
+					</div>
+				</div>
+			</div> <!-- /.local-ambassadors -->
+
+
+
+
+			<!-- 
+			=============================================
+				Apps Downloader
+			============================================== 
+			-->
+			<div class="our-apps-preview fancy-bg mt-20" style="background-image: url(static/images/banners/india.jpg);">
+				<div class="overlay pt-110 pb-90 md-pt-60 md-pb-40">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-5 order-lg-last mr-auto" data-aos="fade-left">
+								<div class="text">
+									<div class="theme-title-one mb-15">
+										<h2>Connect with apps whenever and wherever!</h2>
+									</div> <!-- /.theme-title-one -->
+									<p class="pb-30">Get the app to become part of the fastest growing local travel community. Ask your local guide to personalize your experience to your needs. Keep all your bookings at hand. Sounds cool, right?</p>
+									<div class="d-flex">
+										<a href="#"><img src="{% static 'images/assets/google-play-badge.png' %}" alt=""></a>
+										<a href="#"><img src="{% static 'images/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg' %}" alt=""></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 order-lg-first ml-auto md-mt-30" data-aos="fade-right">
+								<img src="{% static 'images/assets/iPhone-Xs.png' %}" alt="" class="m-auto mockup-img">
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.our-apps-preview -->
+
+
+
+			<!-- 
+			=============================================
+				Blog
+			============================================== 
+			-->
+			<div class="our-blog mt-20">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>From our blogs</h2>
+						<div class="row">
+							<div class="col-lg-9 col-md-10">
+								<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+							</div>
+						</div>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="trip-finder-slider">
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp9.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>Pure Luxe in Punta Mita</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp7.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>All Aboard the Rocky Mountaineer</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp4.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>City Spotlight: Philadelphia</h3>
+								</a>
+							</div>
+						</div>
+					</div> <!-- /.trip-finder-slider -->
+
+					<div class="text-center mt-70 md-mt-40">
+						<a href="our-blog.html" class="theme-main-button lg">More stories</a>
+					</div>
+				</div>
+			</div> <!-- /.our-blog -->
+
+
+
+			<!-- 
+			=============================================
+				Feature Banner
+			============================================== 
+			-->
+			<div class="feature-banner fancy-bg mt-100 md-mt-80" style="background-image: url(static/images/banners/homepage_footer.jpg);">
+				<div class="overlay pt-150 pb-100 md-pt-100 md-pb-80">
+					<div class="container text-center">
+						<h2>READY FOR YOUR NEXT ADVENTURE?</h2>
+						<a href="contact.html" class="theme-main-button mt-40 md-mt-20">TRAVEL NOW</a>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.feature-banner -->
+
+
+			<!-- 
+			=============================================
+				Footer
+			============================================== 
+			-->
+			<footer class="theme-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-5 footer-contact">
+							<ul class="logo-group d-flex align-items-center">
+								<li><a href="index-2.html"><img src="{% static 'images/logo/logo1.svg' %}" alt=""></a></li>
+							</ul>
+							<ul>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-mobile" aria-hidden="true"></i>
+									<a href="tel:+0099223344">+00 99 22 33 44</a>
+								</li>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-envelope-o" aria-hidden="true"></i>
+									<a href="mailto:info@demo.com">info@demo.com</a>
+								</li>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-commenting-o" aria-hidden="true"></i>
+									<a href="#">Start Live Chat</a>
+								</li>
+							</ul>
+							
+						</div>
+
+						<div class="col-lg-5 col-md-7 footer-list">
+							<div class="row">
+								<div class="col-6">
+									<ul>
+										<li><a href="our-blog.html">Our Travel Blog</a></li>
+										<li><a href="#">video Series</a></li>
+										<li><a href="#">Meet our local guide</a></li>
+										<li><a href="#">Travel Now!</a></li>
+										<li><a href="#">FAQ</a></li>
+									</ul>
+								</div>
+								<div class="col-6">
+									<ul>
+										<li><a href="press.html">Media & press room</a></li>
+										<li><a href="#">General travel conditions</a></li>
+										<li><a href="#">Privacy Policy (GDPR)</a></li>
+										<li><a href="#">cookies</a></li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- /.col- -->
+
+						<div class="col-lg-4 footer-newsletter">
+							<h5>Newsletter</h5>
+							<form action="#" class="d-flex align-items-center justify-content-between">
+								<input type="text" placeholder="Your email address">
+								<button class="theme-main-button">Subscribe</button>
+							</form>
+							<ul class="social-icon d-flex">
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div> <!-- /.row -->
+				</div>
+
+				<div class="bottom-footer">
+					<div class="container">
+						<p class="text-center">&copy; Copyright 2020 Troli. All rights reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- /.theme-footer -->
+
+
+		
+
+		<!-- Optional JavaScript _____________________________  -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
+		<!-- Popper js -->
+		<script src="{% static 'vendor/popper.js/popper.min.js' %}"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<!-- menu  -->
+		<script src="{% static 'vendor/mega-menu/assets/js/custom.js' %}"></script>
+    	<!-- jquery easing -->
+		<script src="{% static 'vendor/jquery.easing.min.js' %}"></script>
+		<!-- js count to -->
+		<script src="{% static 'vendor/jquery.appear.js' %}"></script>
+		<script src="vendor/jquery.countTo.js"></script>
+		<!-- owl.carousel -->
+		<script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+		<!-- Select js -->
+		<script src="{% static 'vendor/selectize.js/selectize.min.js' %}"></script>
+		<!-- Date Picker js -->
+		<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+		<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+		<!-- AOS js -->
+		<script src="{% static 'vendor/aos-next/dist/aos.js' %}"></script>
+
+
+		<!-- Theme js -->
+		<script src="{% static 'js/theme.js' %}"></script>
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+
+<!-- Mirrored from html.heloshape.com/troli/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 06:33:57 GMT -->
+</html>

@@ -1,0 +1,226 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Troli :: Registration</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta charset="UTF-8">
+		<meta name="keywords" content="business, travel">
+		<meta name="author" content=" ">
+		<meta name="description" content="Today, tourism has the greatest potential ever to contribute to healthy economic growth, secure jobs, foreign exchange earnings and the further development of local communities.">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#ed3072">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#ed3072">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#ed3072">
+		<title>Troli - Tour and travel guide</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}" >
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 370px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Century Gothic", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #192BE0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #192BE0, #F0E60B);
+  background: -moz-linear-gradient(right, #192BE0, #F0E60B);
+  background: -o-linear-gradient(right, #192BE0, #F0E60B);
+  background: linear-gradient(to left, #192BE0, #15F00B);
+  font-family: "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+</style>
+
+  </head>
+  <body>
+
+  <section>
+				<div id="preloader">
+					<div id="ctn-preloader" class="ctn-preloader">
+						<div class="animation-preloader">
+							<img src='{% static "images/1.svg" %}' alt="">
+							<div class="txt-loading">
+								<span data-text-preloader="T" class="letters-loading">
+									T
+								</span>
+								<span data-text-preloader="R" class="letters-loading">
+									R
+								</span>
+								<span data-text-preloader="O" class="letters-loading">
+									O
+								</span>
+								<span data-text-preloader="L" class="letters-loading">
+									L
+								</span>
+								<span data-text-preloader="I" class="letters-loading">
+									I
+								</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+  <div class="login-page ">
+  <div class="form form-group bg-dark">
+        <div class="card-header text-white ">
+        <h6 class="text-success">Staff Registration</h6>
+      </div><br>
+    <form method="POST" action="reg" class="bg-dark">
+		 {% csrf_token %}
+      <input class="form-control" type="text" name="first_name" placeholder="First Name" required/>
+      <input class="form-control" type="text" name="lname" placeholder="Last Name" required/>
+      <input class="form-control" type="email" name="email" placeholder="Email" required/>
+      <input class="form-control" type="tel" name="con" placeholder="Contact" required/>
+      <input class="form-control" type="text" name="gst" placeholder="GST Number" required/>
+      <input class="form-control" type="text" name="regib" placeholder="Registerd Business" required/>
+      <input class="form-control" type="text" name="user_name" placeholder="E.g., staff123" required/>
+      <input class="form-control" type="password" name="password" placeholder="password" required/>
+      <input class="form-control" type="password" name="confirm_password" placeholder="Confirm password" required/>
+      <label>Confirm? <input type="checkbox" name="staff" required/>
+      </label>
+      <button>create</button>
+      <p class="message">Already registered? <a href="{% url 'login' %}">Sign In</a></p>
+    </form>
+  </div>
+</div>
+    
+    
+
+    
+    <script src="" async defer></script>
+
+    <!-- Optional JavaScript _____________________________  -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src='{% static "vendor/jquery.2.2.3.min.js" %}'></script>
+		<!-- Popper js -->
+		<script src='{% static "vendor/popper.js/popper.min.js" %}'></script>
+		<!-- Bootstrap JS -->
+		<script src='{% static "vendor/bootstrap/js/bootstrap.min.js" %}'></script>
+		<!-- menu  -->
+		<script src='{% static "vendor/mega-menu/assets/js/custom.js" %}'></script>
+    	<!-- jquery easing -->
+		<script src='{% static "vendor/jquery.easing.min.js" %}'></script>
+		<!-- js count to -->
+		<script src='{% static "vendor/jquery.appear.js" %}'></script>
+		<script src='{% static "vendor/jquery.countTo.js" %}'></script>
+		<!-- owl.carousel -->
+		<script src='{% static "vendor/owl-carousel/owl.carousel.min.js" %}'></script>
+		<!-- Select js -->
+		<script src='{% static "vendor/selectize.js/selectize.min.js" %}'></script>
+		<!-- Date Picker js -->
+		<script src='{% static "vendor/daterangepicker/moment.min.js" %}'></script>
+		<script src='{% static "vendor/daterangepicker/daterangepicker.js" %}'></script>
+		<!-- AOS js -->
+		<script src='{% static "vendor/aos-next/dist/aos.js" %}'></script>
+
+
+		<!-- Theme js -->
+		<script src='{% static "js/theme.js" %}'></script>
+		</div> <!-- /.main-page-wrapper -->
+  </body>
+</html>

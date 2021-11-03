@@ -1,0 +1,198 @@
+/* Responsive CSS Document */
+
+/* 
+    Project Name : Troli - Tour and travel guide HTML5 Template;
+    Version      : 1.0.
+    Developed by : Heloshape (heloshape18@gmail.com)
+   
+*/
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1500px) {
+  .theme-main-menu .right-widget {margin-left: 0;}
+  .theme-main-menu .logo a {width: 120px;}
+  .navbar-nav .nav-item.dropdown-holder {margin-right: 20px;}
+  .theme-main-menu .main-header {padding-left: 5px; padding-right: 5px;}
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .theme-main-menu .logo a {width: 100px;}
+  .navbar-nav .nav-item.dropdown-holder {margin-right: 12px;}
+  .theme-main-menu .main-header .right-widget .search-form {margin-right: 0;}
+  .navbar-nav .nav-item .nav-link {font-size: 14px;}
+  .theme-main-menu .right-widget .theme-main-button {min-width: 120px; line-height: 40px; padding: 0 22px; font-size: 13px;}
+}
+
+@media (min-width: 576px) {
+  .main-hero-banner.banner-sm {height: auto; padding: 200px 0 150px;}
+  .main-hero-banner.banner-sm h1 {margin-top: 0; font-size: 50px;}
+} 
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-hero-banner {height: 500px;}
+  .main-hero-banner h1 {font-size: 40px;}
+  .block-style-two .icon {width: 120px;}
+  .media-meta-box {height: 300px;}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+
+@media (max-width: 991px) {
+  body {font-size: 14px;}
+  .theme-main-menu .container {max-width: 100%;}
+  #mega-menu-holder {position: static;}
+  .theme-main-menu .logo {margin: 0 auto; transform: translateX(66px);}
+  .theme-main-menu .right-widget {margin: 0;}
+  .theme-main-menu .logo a {width: 100px;}
+  body .theme-main-button,body .theme-main-button-two,.resources-item-list .theme-main-button {min-width: 120px; line-height: 40px; padding: 0 22px; font-size: 13px;}
+  .theme-main-menu .main-header .search-form button {line-height: 40px;width: 30px;}
+  .theme-main-menu .top-heaader {padding: 6px 15px;}
+  .theme-main-menu .main-header {padding: 12px 15px;}
+  .theme-main-menu .main-header:before {display: none;}
+  .main-hero-banner {height: 400px;}
+  .main-hero-banner h1 {margin-top: 0;}
+  .main-hero-banner h1,.feature-banner h2,.main-hero-banner.blog-hero-banner h1 {font-size: 30px;}
+  .main-hero-banner .search-filter {transform: translateY(75%);}
+  .search-filter .main-wrapper {padding: 20px 15px;}
+  .theme-title-one h2 {font-size: 30px;}
+  .our-apps-preview .mockup-img {max-width: 300px;}
+  .theme-footer {padding-top: 40px;}
+  .theme-footer [class*="col-"] {padding-bottom: 30px;}
+  .theme-footer .row .row [class*="col-"] {padding-bottom: 0;}
+  .theme-footer .bottom-footer {margin-top: 20px; padding: 15px 0;}
+  .theme-footer .footer-list li a {margin-bottom: 15px;}
+  .feature-banner-two {padding: 80px 0;}
+  .article-submission-section {padding: 60px 0;}
+  .blog-sidebar {margin-top: 80px;}
+  .contribute-banner {margin-bottom: 80px;}
+  .signUp-form {width: 100%;}
+  .destination-info-box .tour-meta-one {padding-bottom: 50px;}
+  .destination-info-box .lightgallery .img-box {height: 330px;}
+  .destinations-finder .media-meta-box {height: 300px;}
+  .article-submission-section {padding: 80px 0;}
+  .block-style-four {margin-top: 40px;}
+  .block-style-four {height: auto;}
+  .block-style-four .hover-content {position: relative; padding: 30px 15px;}
+} 
+/*(max-width: 991px)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .article-submission-section .list-item li {width: 50%;}
+  .media-meta-box {height: 330px;}
+}
+/*(min-width: 768px) and (max-width: 991px)*/
+
+@media (max-width: 767px) {
+  h3,.article-submission-section h3,.blog-title h3,.contribute-banner h3,.local-expert-block .text h3,
+  .destination-info-box .des-title,.destination-info-box h3 {font-size: 20px;}
+  h4,.team-block h4,.blog-post-meta .post-meta .title, .blog-post-meta .post-meta .title a {font-size: 16px;}
+  .media-meta-box {height: 320px; max-width: 320px; margin: 0 auto;}
+  .trip-finder-slider .owl-nav,.ambassadors-slider .owl-nav {position: static; margin-top: 35px;}
+  .trip-finder-slider .owl-nav [class*=owl-],.ambassadors-slider .owl-nav [class*=owl-] {margin: 0 10px;}
+  .block-style-three .img-box {height: 180px;}
+  .ambassadors-block {max-width: 300px; margin: 0 auto;} 
+  .ambassadors-block .text div {transform: none;}
+  .ambassadors-block .text p {font-size: 18px;}
+  .main-hero-banner:before {display: none;}
+  .feature-banner-two h3 {font-size: 24px; padding-bottom: 30px;}
+  .team-block .team-img {width: 100px; height: 100px;}
+  .article-submission-section .list-item li {width: 100%; margin-bottom: 18px;}
+  .article-submission-section .input-wrapper textarea.lg {min-height: 220px;}
+  .article-submission-section .main-bg {padding: 30px 15px;}
+  .main-hero-banner.blog-hero-banner h1 {width: 100%;}
+  .blog-details-meta p.mark-text {font-size: 16px;}
+  .blog-details-meta p {padding-bottom: 15px;}
+  .blog-details-meta .author-info {margin-bottom: 20px;}
+  .blog-post-meta .img-meta.full-width {height: 250px;}
+  .blog-post-meta .img-meta .fancybox {width: 90px; height: 40px; line-height: 38px; font-size: 22px;}
+  .blog-details-meta blockquote {font-size: 20px; width: 100%; margin-bottom: 25px;}
+  .blog-details-meta .quote-author .name {font-size: 16px;}
+  .blog-post-meta .img-meta {height: 250px;}
+  .blog-details-meta .img-meta.full-width {margin-bottom: 25px;}
+  .blog-details-meta .img-meta {margin-bottom: 30px;}
+  .blog-details-meta .blog-sub-heading {font-size: 18px;}
+  .cbp-l-filters-dropdown {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin:  0 auto 20px !important;
+    height: auto;
+  }
+  .trip-finder-filter .cbp-l-filters-dropdownWrap {margin: 0 auto;}
+  .local-expert-block .experts-img {width: 120px; height: 120px; margin: 0 auto;}
+  .local-expert-block .text,.destination-details .local-expert-block .text {width: 100%; padding: 40px 0 0;}
+  .trip-finder-filter .cbp-item {padding-bottom: 20px;}
+  .video-banner .overlay {padding: 80px 0;}
+  .video-banner .overlay a {width: 60px;height: 60px; line-height: 58px; font-size: 26px;}
+  .destination-info-box .lightgallery .img-box {height: 280px;}
+  .destination-info-box .booking-banner {width: 100%; padding: 30px 15px 25px;}
+  .blog-post-meta .post-meta {padding-top: 15px;}
+  .blog-post-meta {margin-bottom: 30px;}
+  .feature-experience .block-style-one .icon {height: 80px;}
+  .local-expert-block {margin-bottom: 50px;}
+}
+/*(max-width: 767px)*/
+
+
+@media (max-width: 575px) {
+  .theme-main-menu .top-heaader .social-icon {display: none;}
+  .theme-main-menu .top-heaader .call-us {padding-right: 15px;}
+  .theme-main-menu .top-heaader .language-switcher {padding-left: 15px;}
+  .theme-main-menu .right-widget .theme-main-button {display: none;}
+  .theme-main-menu .main-header .right-widget .search-form {margin: 0;}
+  .theme-main-menu .logo {transform: none;}
+  .main-hero-banner h1 {font-size: 26px;}
+  .main-hero-banner.blog-hero-banner h1 {font-size: 20px;}
+  .theme-title-one h2 {font-size: 24px;}
+  .block-style-one p {padding: 12px 0 0;}
+  .theme-footer .bottom-footer p {font-size: 13px; line-height: 1.6em;}
+  .main-hero-banner {height: auto; padding: 160px 0 150px;}
+  .main-hero-banner.banner-sm {padding: 130px 0 60px;}
+  .main-hero-banner.blog-hero-banner {height: auto; padding: 130px 0 60px;}
+  .pin-post-section .post-meta {padding: 15px;}
+  .user-comment-area .single-comment {padding: 30px 0 20px;}
+  .user-comment-area .single-comment .user-comment-data {padding: 30px 0 0 0;}
+  .blog-details-meta .post-date {padding-top: 20px;}
+  .cart-form .main-bg {padding-left: 15px; padding-right: 15px;}
+  .signUp-form {padding: 30px 15px;}
+  .block-style-three .text-box {padding: 15px;}
+  .mask-img {height: 220px;}
+  .destination-info-box .tour-plan .per-day-trip {padding-left: 25px;}
+  .destination-info-box .tour-plan .day-count:before {left: -32px;}
+  .destination-info-box .tour-plan .day-count:after {left: -29px;}
+  .destination-info-box .booking-banner h6 {font-size: 14px;}
+  .destination-info-box .booking-banner h6 span {font-size: 18px;}
+  .destination-info-box .booking-banner h5 {font-size: 22px; padding: 10px 0 15px;}
+  .resources-item-list img {width: 80px; height: 80px;}
+  .resources-item-list h5 {font-size: 16px; padding-left: 15px;}
+  .resources-item-list li {padding: 15px 0;}
+  .clients-block .bg {padding: 25px 15px;}
+  .article-submission-section .input-wrapper {margin-bottom: 25px;}
+  .pledge-peoples {text-align: center;}
+  .pledge-peoples .img-bg {max-width: 300px; margin: 0 auto;}
+  .review-block {padding: 25px 15px;}
+  .local-experts .nav-tabs .nav-item a {width: 120px; line-height: 30px; font-size: 14px;}
+  .local-experts .nav-item {margin: 0 8px;}
+  .local-experts .nav-tabs {margin: 35px 0 60px;}
+  .theme-footer .footer-contact li {margin-bottom: 10px;}
+  .theme-footer .footer-contact li i.fa-mobile {font-size: 30px;}
+  .theme-footer .footer-contact li i {font-size: 20px;}
+  .theme-footer .footer-contact .logo-group li img {width: 100px; margin: 0 0 10px 0;}
+  .theme-footer .footer-list li a {margin-bottom: 12px; line-height: 1.4em;}
+  .theme-footer .footer-newsletter .social-icon {margin-top: 20px;}
+  .modal-content .modalBody {padding: 25px 15px;}
+}
+
+/*(max-width: 575px)*/

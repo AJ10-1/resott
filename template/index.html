@@ -1,0 +1,624 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="business, travel">
+		<meta name="author" content=" ">
+		<meta name="description" content="Today, tourism has the greatest potential ever to contribute to healthy economic growth, secure jobs, foreign exchange earnings and the further development of local communities.">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#ed3072">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#ed3072">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#ed3072">
+		<title>Troli - Tour and travel guide</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}" >
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+		<!-- Fix Internet Explorer ______________________________________-->
+		<!--[if lt IE 9]>
+			<script src='{% static "http://html5shiv.googlecode.com/svn/trunk/html5.js" %}'></script>
+			<script src='{% static "vendor/html5shiv.js" %}'></script>
+			<script src='{% static "vendor/respond.js" %}'></script>
+		<![endif]-->	
+	</head>
+
+	<body>
+		<div class="main-page-wrapper">
+
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<section>
+				<div id="preloader">
+					<div id="ctn-preloader" class="ctn-preloader">
+						<div class="animation-preloader">
+							<img src='{% static "images/1.svg" %}' alt="">
+							
+							<div class="txt-loading">
+								<span data-text-preloader="T" class="letters-loading">
+									T
+								</span>
+								<span data-text-preloader="R" class="letters-loading">
+									R
+								</span>
+								<span data-text-preloader="O" class="letters-loading">
+									O
+								</span>
+								<span data-text-preloader="L" class="letters-loading">
+									L
+								</span>
+								<span data-text-preloader="I" class="letters-loading">
+									I
+								</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+
+			<!-- 
+			=============================================
+				Theme Main Menu
+			============================================== 
+			-->
+			<div class="theme-main-menu">
+				<div class="top-heaader">
+					<div class="clearfix">
+						<div class="">
+							<ul class="d-flex align-items-center justify-content-between">
+								<li>
+									<ul class="social-icon d-sm-flex">
+										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+									</ul>
+								</li>
+								<li class="language-switcher">
+									<div class="dropdown">
+										<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+										    En
+										</button>
+										<div class="dropdown-menu">
+											<ul class="ct-language__dropdown">
+												<li><a href="#" class="lang-en lang-select">ENGLISH</a></li>
+												<li><a href="#" class="lang-es lang-select">NORWEGIAN</a></li>
+											</ul>
+									  	</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div> <!-- /.top-heaader -->
+
+				<div class="main-header">
+					<div class="d-flex align-items-center justify-content-between">
+						<nav id="mega-menu-holder" class="navbar navbar-expand-lg order-lg-2">
+							<div  class="nav-container">
+								<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							        <span></span>
+							    </button>
+							   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+							   		<ul class="navbar-nav">
+									   <li class="nav-item active">
+								            <a class="nav-link" href="{% url 'index' %}">Home</a>
+								        </li>
+										{% if user.is_authenticated %}
+										<li class="nav-item">
+								            <a class="nav-link" href="{% url 'profile' %}">Hi &nbsp; {{ user.username }}</a>
+								        </li>
+										<li class="nav-item">
+								            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+								        </li>
+										<li class="nav-item">
+								            <a class="nav-link" >Booking</a>
+								        </li>
+										{% else %}
+										<li class="nav-item dropdown-holder">
+									    	<a href="#" class="nav-link">Register</a>
+									    	<ul class="sub-menu">
+									    		<li class="sub-nav-item"><a href="{% url 'reg' %}">Partner</a></li>
+								            	<li class="sub-nav-item"><a href="{% url 'userreg' %}">User</a></li>
+								            </ul>
+									    </li>
+										<li class="nav-item">
+								            <a class="nav-link" href="{% url 'login' %}">Login</a>
+								        </li>
+										{% endif %}
+										
+									   
+								   </ul>
+							   </div>
+							</div> <!-- /.container -->
+						</nav> <!-- /#mega-menu-holder -->
+						<div class="logo order-lg-1"><a href="{% url 'index' %}"><img src='{% static "images/logo/logo1.svg" %}' alt=""></a></div>
+						<ul class="right-widget d-flex order-lg-3">
+							<li class="search-form">
+								<div class="dropdown">
+									<button type="button" class="dropdown-toggle" data-toggle="dropdown">
+									    <i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+									
+								  	</div>
+								</div>
+							</li>
+							<li><a href="{% url 'addser' %}" class="theme-main-button">Add dish</a></li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- /.theme-main-menu -->
+			
+			<!-- 
+			=============================================
+				Theme Main Hero Banner
+			============================================== 
+			-->
+			<div class="main-hero-banner d-flex align-items-center justify-content-center" style="background-image: url(static/images/banners/homepage_hero.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 m-auto">
+							<h1 data-aos="fade-up">Leave with no excuses and travel with no regrets</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="search-filter">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-11 m-auto">
+								<div class="main-wrapper">
+								
+										<div class="row">
+											<div class="col-xl-6 col-lg-3 md-mb-20">
+												<form method = "post" action = "{% url 'index' %}">
+													{% csrf_token n%}
+														
+													<select  type="option" name='cty' class="theme-select-menu" >
+														{% for i in ct %}
+														<option value="{{i.id}}">{{i.cityy}}</option>
+															{% endfor %}
+													</select>
+													
+												
+											
+											<div class="col-xl-2 col-lg-3">
+												<button class="theme-main-button m-auto">Search</button>
+											</div>
+											</form>
+										</div>
+										</div>
+										
+
+							<!--				<div class="col-lg-3 col-sm-6 md-mb-20">
+												<input type="text" name="daterange" value="Enter Date" class="input-box">
+											</div>
+
+											<div class="col-lg-3 col-sm-6 md-mb-20">
+												<div class="people-count">
+													<div class="people-input">
+														<input type="number" name="total-people" id="total-people" readonly placeholder="People">
+													</div>
+													<div class="count-dropdown">
+														<label for="adult">Adults</label>
+														<input type="number" name="adult" id="adult" min="0" required >
+														<label for="children">Children</label>
+														<input type="number" name="children" id="children" min="0" required >
+
+														<div class="apply-pepole">Apply</div>
+													</div>
+												</div> <!-- /.people-count -->
+											</div>
+
+											
+										</div>
+									
+								</div> <!-- /.main-wrapper -->
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.search-filter -->
+			</div> <!-- /.main-hero-banner -->
+
+
+
+			<!-- 
+			=============================================
+				Local Experience
+			============================================== 
+			-->
+			<div class="local-experience mt-180 md-mt-250 md-pt-80 sm-pt-150">
+				<div class="container">
+					<div class="theme-title-one text-center">
+						<h2>Your Next Holiday</h2>
+					</div> <!-- /.theme-title-one -->
+
+
+					<div class="row">
+						<div class="col-lg-4" data-aos="fade-up">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src='{% static "images/icon/camera.png" %}' alt="" class="icon">
+								<h4>LOCAL COMMITMENT</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src='{% static "images/icon/palm_tree.png" %}' alt="" class="icon">
+								<h4>ECO-FRIENDLY EXPERIENCES</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+							<div class="block-style-one text-center mt-70 md-mt-50">
+								<img src='{% static "images/icon/bicycle.png" %}' alt="" class="icon">
+								<h4>ETHICAL AWARENESS</h4>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-70 md-mt-50">
+
+				</div> <!-- /.container -->
+			</div> <!-- /.local-experience -->
+
+
+
+			<!-- 
+			=============================================
+				Trip Finder
+			============================================== 
+			-->
+			<div class="trip-finder mt-130 md-mt-80">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>What are you looking for?</h2>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="trip-finder-slider">
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/lko.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Rumi Darwaza</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/clock.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Husainabad Clock Tower</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/ambedkar.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Ambedkar Park</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/Aminabad-Market.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Aminabad Market </h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/ganj.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Hazratganj Market </h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/planet.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Indira Gandhi Planetarium</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/zoo.jpg);">
+								<a href="#" class="d-flex align-items-center justify-content-center">
+									<h3>Nawab Wahid Ali Shah Zoological Garden</h3>
+								</a>
+							</div>
+						</div>
+					</div> <!-- /.trip-finder-slider -->
+				</div>
+			</div> <!-- /.trip-finder -->
+
+
+			<!-- 
+			=============================================
+				Trip Concept
+			============================================== 
+			-->
+			<div class="trip-concepts fancy-bg" style="background-image: url(static/images/banners/homepage_footer.jpg);">
+				<div class="overlay pt-130 pb-110 md-pt-80 md-pb-40">
+					<div class="container">
+						<div class="theme-title-one text-center">
+							<h2>Unique Trip Concepts</h2>
+							<h5>A new way to travel</h5>
+							<div class="row">
+								<div class="col-lg-6 m-auto">
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+								</div>
+							</div>
+						</div> <!-- /.theme-title-one -->
+
+						<div class="row">
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src='{% static "images/icon/lotus.png" %}' alt="" class="icon">
+									<h4>ORIENTATION</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src='{% static "images/icon/festival.png" %}' alt="" class="icon">
+									<h4>Events</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src='{% static "images/icon/trip.png" %}' alt="" class="icon">
+									<h4>DREAM JOURNEY</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+								<div class="block-style-two text-center mt-70 md-mt-50">
+									<img src='{% static "images/icon/hyperlocal.png" %}' alt="" class="icon">
+									<h4>LOCAL ENTIRE</h4>
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam.</p>
+									<a href="our-trip-concept.html" class="theme-main-button mt-30">Explore our trips</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.trip-concepts -->
+
+			<!-- 
+			=============================================
+				Local Ambassadors
+			============================================== 
+			-->
+			<div class="local-ambassadors mt-130 md-mt-80">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>Our Local Categories</h2>
+						
+					</div> <!-- /.theme-title-one -->
+
+					 <!-- /.ambassadors-slider -->
+
+					
+				</div>
+			</div> <!-- /.local-ambassadors -->
+
+			<!-- 
+			=============================================
+				Apps Downloader
+			============================================== 
+			-->
+			<div class="our-apps-preview fancy-bg mt-20" style="background-image: url(static/images/banners/india.jpg);">
+				<div class="overlay pt-110 pb-90 md-pt-60 md-pb-40">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-5 order-lg-last mr-auto" data-aos="fade-left">
+								<div class="text">
+									<div class="theme-title-one mb-15">
+										<h2>Connect with apps whenever and wherever!</h2>
+									</div> <!-- /.theme-title-one -->
+									<p class="pb-30">Get the app to become part of the fastest growing local travel community. Ask your local guide to personalize your experience to your needs. Keep all your bookings at hand. Sounds cool, right?</p>
+								</div>
+							</div>
+
+							<div class="col-lg-4 order-lg-first ml-auto md-mt-30" data-aos="fade-right">
+								<img src='{% static "images/assets/iPhone-Xs.png" %}' alt="" class="m-auto mockup-img">
+							</div>
+						</div>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.our-apps-preview -->
+
+
+
+			<!-- 
+			=============================================
+				Blog
+			============================================== 
+			-->
+			<div class="our-blog mt-20">
+				<div class="container">
+					<div class="theme-title-one mb-50 md-mb-40">
+						<h2>From our blogs</h2>
+						<div class="row">
+							<div class="col-lg-9 col-md-10">
+								<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+							</div>
+						</div>
+					</div> <!-- /.theme-title-one -->
+
+					<div class="trip-finder-slider">
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp9.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>Pure Luxe in Punta Mita</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp7.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>All Aboard the Rocky Mountaineer</h3>
+								</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="media-meta-box" style="background-image: url(static/images/assets/wxp4.jpg);">
+								<a href="blog-details.html" class="d-flex align-items-center justify-content-center">
+									<h3>City Spotlight: Philadelphia</h3>
+								</a>
+							</div>
+						</div>
+					</div> <!-- /.trip-finder-slider -->
+
+					<div class="text-center mt-70 md-mt-40">
+						<a href="our-blog.html" class="theme-main-button lg">More stories</a>
+					</div>
+				</div>
+			</div> <!-- /.our-blog -->
+
+
+
+			<!-- 
+			=============================================
+				Feature Banner
+			============================================== 
+			-->
+			<div class="feature-banner fancy-bg mt-100 md-mt-80" style="background-image: url(static/images/banners/homepage_footer.jpg);">
+				<div class="overlay pt-150 pb-100 md-pt-100 md-pb-80">
+					<div class="container text-center">
+						<h2>READY FOR YOUR NEXT ADVENTURE?</h2>
+						<a href="contact.html" class="theme-main-button mt-40 md-mt-20">TRAVEL NOW</a>
+					</div>
+				</div> <!-- /.overlay -->
+			</div> <!-- /.feature-banner -->
+
+
+			<!-- 
+			=============================================
+				Footer
+			============================================== 
+			-->
+			<footer class="theme-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-5 footer-contact">
+							<ul class="logo-group d-flex align-items-center">
+								<li><a href="{% url 'index' %}"><img src='{% static "images/logo/logo1.svg" %}' alt=""></a></li>
+							</ul>
+							<ul>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-mobile" aria-hidden="true"></i>
+									<a href="tel:+0099223344">+00 99 22 33 44</a>
+								</li>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-envelope-o" aria-hidden="true"></i>
+									<a href="mailto:info@demo.com">info@demo.com</a>
+								</li>
+								<li class="d-flex align-items-center">
+									<i class="fa fa-commenting-o" aria-hidden="true"></i>
+									<a href="#">Start Live Chat</a>
+								</li>
+							</ul>
+							
+						</div>
+
+						<div class="col-lg-5 col-md-7 footer-list">
+							<div class="row">
+								<div class="col-6">
+									<ul>
+										<li><a href="our-blog.html">Our Travel Blog</a></li>
+										<li><a href="#">video Series</a></li>
+										<li><a href="#">Meet our local guide</a></li>
+										<li><a href="#">Travel Now!</a></li>
+										<li><a href="#">FAQ</a></li>
+									</ul>
+								</div>
+								<div class="col-6">
+									<ul>
+										<li><a href="press.html">Media & press room</a></li>
+										<li><a href="#">General travel conditions</a></li>
+										<li><a href="#">Privacy Policy (GDPR)</a></li>
+										<li><a href="#">cookies</a></li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- /.col- -->
+
+						<div class="col-lg-4 footer-newsletter">
+							<h5>Newsletter</h5>
+							<form action="#" class="d-flex align-items-center justify-content-between">
+								<input type="text" placeholder="Your email address">
+								<button class="theme-main-button">Subscribe</button>
+							</form>
+							<ul class="social-icon d-flex">
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div> <!-- /.row -->
+				</div>
+
+				<div class="bottom-footer">
+					<div class="container">
+						<p class="text-center">&copy; Copyright 2020 Troli. All rights reserved.</p>
+					</div>
+				</div>
+			</footer> <!-- /.theme-footer -->
+
+
+		
+
+		<!-- Optional JavaScript _____________________________  -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src='{% static "vendor/jquery.2.2.3.min.js" %}'></script>
+		<!-- Popper js -->
+		<script src='{% static "vendor/popper.js/popper.min.js" %}'></script>
+		<!-- Bootstrap JS -->
+		<script src='{% static "vendor/bootstrap/js/bootstrap.min.js" %}'></script>
+		<!-- menu  -->
+		<script src='{% static "vendor/mega-menu/assets/js/custom.js" %}'></script>
+    	<!-- jquery easing -->
+		<script src='{% static "vendor/jquery.easing.min.js" %}'></script>
+		<!-- js count to -->
+		<script src='{% static "vendor/jquery.appear.js" %}'></script>
+		<script src='{% static "vendor/jquery.countTo.js" %}'></script>
+		<!-- owl.carousel -->
+		<script src='{% static "vendor/owl-carousel/owl.carousel.min.js" %}'></script>
+		<!-- Select js -->
+		<script src='{% static "vendor/selectize.js/selectize.min.js" %}'></script>
+		<!-- Date Picker js -->
+		<script src='{% static "vendor/daterangepicker/moment.min.js" %}'></script>
+		<script src='{% static "vendor/daterangepicker/daterangepicker.js" %}'></script>
+		<!-- AOS js -->
+		<script src='{% static "vendor/aos-next/dist/aos.js" %}'></script>
+
+
+		<!-- Theme js -->
+		<script src='{% static "js/theme.js" %}'></script>
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+
+<!-- Mirrored from html.heloshape.com/troli/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 06:33:20 GMT -->
+</html>
