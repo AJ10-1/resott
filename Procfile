@@ -1,1 +1,1 @@
-web:waitress-serve --port=$PORT resott.wsgi:application
+web:gunicorn resott.wsgi --log-file-
